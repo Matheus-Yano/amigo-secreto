@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amigo Secreto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow-row"><span class="tag-icon">🎁</span></div>
+  <h1>Amigo secreto</h1>
+  <p class="sub">Adicione o grupo, sorteie e cada pessoa descobre — sozinha, na tela — quem ela vai presentear.</p>
+
+  <div class="ticket">
+    <div class="ticket-section">
+      <label for="amigo">Nome do participante</label>
+      <div class="row">
+        <input type="text" id="amigo" placeholder="Digite um nome e aperte Enter" autocomplete="off">
+        <button class="btn-add" id="btnAdd">Adicionar</button>
+      </div>
+      <p class="msg" id="msg" role="alert"></p>
+      <ul class="chips" id="chips"></ul>
+      <p class="empty" id="empty">Ninguém na lista ainda.</p>
+    </div>
+
+    <div class="perf"></div>
+
+    <div class="ticket-section">
+      <div class="draw-head">
+        <label style="margin:0;">Sorteio</label>
+        <span class="count-pill" id="countPill">0 participantes</span>
+      </div>
+      <button class="btn-draw" id="btnDraw" disabled>Sortear amigo secreto</button>
+
+      <ul class="picker" id="picker" hidden></ul>
+      <div id="revealArea"></div>
+
+      <div class="footer-row">
+        <button class="link-reset" id="btnReset" hidden>Recomeçar sorteio</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
